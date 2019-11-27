@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'hello ninjas enough action',
+          'hello ninjas',
           style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
