@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 
 void main() => runApp(
       MaterialApp(home: Home()),
@@ -14,22 +15,20 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Column(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-            color: Colors.grey[400],
-            child: Text('hello'),
+          Text('Hello, world'),
+          FlatButton(
+            onPressed: () {},
+            child: Text('click me'),
+            color: Colors.amber,
           ),
           Container(
-            padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
-            margin: EdgeInsets.all(30),
-            color: Colors.grey[400],
-            child: Text('hello'),
-          ),
-          Padding(
+            color: Colors.cyan,
             padding: EdgeInsets.all(30),
-            child: Text('hello'),
+            child: Text('inside container'),
           )
         ],
       ),
