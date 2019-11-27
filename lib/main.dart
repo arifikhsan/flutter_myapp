@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 void main() => runApp(
       MaterialApp(home: Home()),
@@ -13,47 +14,24 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Icon(
-              Icons.airport_shuttle,
-              size: 100,
-              color: Colors.lightBlue,
-            ),
-            RaisedButton(
-              onPressed: () {
-                print('you clicked me');
-              },
-              child: Text(
-                "Click me",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Colors.lightGreen,
-            ),
-            FlatButton(
-              onPressed: () {},
-              child: Text('flat'),
-              color: Colors.blue,
-            ),
-            RaisedButton.icon(
-              onPressed: () {},
-              icon: Icon(
-                Icons.mail,
-                color: Colors.white,
-              ),
-              label: Text('Mail me'),
-              color: Colors.amber,
-            ),
-            IconButton(
-              icon: Icon(Icons.alternate_email),
-              onPressed: () {
-                print('@ you click @');
-              },
-              color: Colors.amber,
-            )
-          ],
-        ),
+      body: Column(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+            color: Colors.grey[400],
+            child: Text('hello'),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
+            margin: EdgeInsets.all(30),
+            color: Colors.grey[400],
+            child: Text('hello'),
+          ),
+          Padding(
+            padding: EdgeInsets.all(30),
+            child: Text('hello'),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Text('Click'),
