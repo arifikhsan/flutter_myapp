@@ -14,14 +14,26 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: Text(
-          'hello ninjas',
-          style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2,
-              color: Colors.grey[600],
-              fontFamily: 'IndieFlower'),
+        child: Column(
+          children: <Widget>[
+            Text(
+              'hello ninjas',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                  color: Colors.grey[600],
+                  fontFamily: 'IndieFlower'),
+            ),
+            Image(
+              image: NetworkImage('https://via.placeholder.com/125'),
+            ),
+            Image(
+              image: AssetImage('assets/200.png'),
+            ),
+            Image.asset('assets/100.png'),
+            Image.network('https://via.placeholder.com/50')
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
